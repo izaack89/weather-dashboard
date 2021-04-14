@@ -1,0 +1,24 @@
+/* Here I create the variables that I will use in order to not repeat myself  */
+:root {
+  --white: #fff;
+  --backgorundBody: #f1f1f1;
+  --germanColor: #920707;
+  --font-family: "Roboto", sans-serif;
+}
+/* This select is used for apply the properties to all the page */
+* {
+  font-family: var(--font-family);
+}
+/* I use this to apply the follow properties to the body */
+body {
+  background-color: var(--backgorundBody);
+}
+
+.custom-text-color {
+  color: var(--germanColor) !important;
+}
+
+.custom-background-color {
+  color: var(--white) !important;
+  background-color: var(--germanColor) !important;
+}
