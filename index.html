@@ -41,11 +41,44 @@
                         </div>
                     </div>
                     <button class=" btn bbtn-block btn-primary custom-background-color" type="button" id="deleteHhistory">Clear history</button>
-                    <ul class="list-group" id="cityHistory">
+                    <ul class="list-group pt-3" id="cityHistory">
+                        <li class="list-group-item border-0" style="background-color: transparent;">
+                            <button class=" btn btn-block btn-lg w-100 bg-dark text-white" type="button">City 1</button>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-sm-9">
-
+                    <div class="row">
+                        <div class="card" style="width: 100%;">
+                            <div class="card-body">
+                                <h5 class="card-title pb-2" id="cityLabel">City (Date) (IMG)</h5>
+                                <h6 class="card-subtitle pb-2 mb-2 text-muted" id="tempMain">Temp: (1F)</h6>
+                                <h6 class="card-subtitle pb-2 mb-2 text-muted" id="windMain">Wind: (1F)</h6>
+                                <h6 class="card-subtitle pb-2 mb-2 text-muted" id="humidityMain">Humidity: (1F)</h6>
+                                <h6 class="card-subtitle pb-2 mb-2 text-muted" id="uvIndexMain">UV Index: (1F)</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-sm-12">
+                            <h5 class="card-title" id="cityLabel">5 - Day Forecast:</h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="row" id="forecast-list">
+                                <div class="col-sm-2">
+                                    <div class="card" style="width: 100%;">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item border-0 bg-dark text-white">Date</li>
+                                            <li class="list-group-item border-0 bg-dark text-white">(IMG Icon)</li>
+                                            <li class="list-group-item border-0 bg-dark text-white">Temp : (ªF)</li>
+                                            <li class="list-group-item border-0 bg-dark text-white">Wind : (ªF)</li>
+                                            <li class="list-group-item border-0 bg-dark text-white">Humidity : (ªF)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
