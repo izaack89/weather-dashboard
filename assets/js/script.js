@@ -268,6 +268,8 @@ var cleanLStorage = function () {
     localStorage.setItem("weathercities", '');
     // Cleant the list of the front end 
     listHistorical.textContent = "";
+    //Clear the input
+    cityInput.value = "";
 }
 
 // This function is to initialize the variable that have the information of the local Storage and if are data can create the buttons
