@@ -77,7 +77,7 @@ var createCityHistorical = function (city) {
 var getWeather = function () {
   var city = cityInput.value;
   var apiUrl =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&appid=" +
     weatherAPI;
