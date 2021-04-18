@@ -275,8 +275,10 @@ var cleanLStorage = function () {
 // This function is to initialize the variable that have the information of the local Storage and if are data can create the buttons
 var initSystem = function () {
     // I pass what is inside of the local Storage 
-    citiesLocalSotage = JSON.parse(localStorage.getItem("weathercities"));    
+    citiesLocalSotage = localStorage.getItem("weathercities");    
     if (citiesLocalSotage !== null) {
+        //If exist I parse the elements in order to be array
+        citiesLocalSotage = JSON.parse(localStorage.getItem("weathercities"));    
         // if is not null I do a loop to get the information of all the cities         
         for (i = 0; i < citiesLocalSotage.length; i++) {
             // I call the function that create the buttons
