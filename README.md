@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+# 🌥[Weather Dashboard 🔗](https://izaack89.github.io/weather-dashboard/)
 
-You can use the [editor on GitHub](https://github.com/izaack89/weather-dashboard/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This Quiz is to help you to understand Javascript so take the quiz and you can find on what topics you should review or you can demostrate that you are a Master.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 🌦 Weather Dashboard App
 
-### Markdown
+With this app you can know the weather of a City with 5 day forecast. This will help you to planify your activities according to the weather prediction.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. Main View
 
-```markdown
-Syntax highlighted code block
+![Main View](./assets/readmeFiles/WD-mainView.png)
 
-# Header 1
-## Header 2
-### Header 3
+2.  Weather Dashboard Functions.- This Weather Dashboard was built byt using Server-Side API (Open Weather) in order to get the information
 
-- Bulleted
-- List
+    ![Second View](./assets/readmeFiles/WD-view2.png)
 
-1. Numbered
-2. List
+3.  Local Storage.- This app use localStorage in order to save the cities that you have already looked and if you one to check again you only need to click on the button ![Local Storage](./assets/readmeFiles/WD-localStorage.png)
 
-**Bold** and _Italic_ and `Code` text
+4.  UV Indicator.- By consulting the WHO page, I was able to identify the range of UV and their clasification. With this you can know if is safe to go outside or better stay in home
 
-[Link](url) and ![Image](src)
-```
+    ![UV Index](./assets/readmeFiles/WD-indexUV1.png)
+    ![UV Index](./assets/readmeFiles/WD-indexUV2.png)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+5.  Search Box.- The search box will help you to trigger the code to find the current weather, the 5-day forecast, the localStorage ![Search Box](./assets/readmeFiles/WD-searchView.png)
 
-### Jekyll Themes
+![Output View](./assets/readmeFiles/WD-view3.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/izaack89/weather-dashboard/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## 🌤 [Weather Dashboard GitHub Code](https://github.com/izaack89/code-base)
 
-### Support or Contact
+## ⛈ [Weather Dashboard GitHub Live Page](https://izaack89.github.io/weather-dashboard/)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## 🌩 Weather Dashboard References
+
+- [fontawesome](https://fontawesome.com/icons?d=gallery&p=2) - Fontawesome
+- [UV Index](<https://www.who.int/news-room/q-a-detail/radiation-the-ultraviolet-(uv)-index>) - UV Index - WHO
+- [navbar](https://getbootstrap.com/docs/5.0/components/navbar/) - Navbar CSS
+- [buttons CSS](https://getbootstrap.com/docs/5.0/components/buttons/) - Buttons CSS
+- [Format MomentJs](https://momentjs.com/docs/#/displaying/format/) - time Format
+- [Current Weather](https://openweathermap.org/current) - Current Weather API Document
+- [Forecast Weather ](https://openweathermap.org/api/one-call-api) - Forecast Weather API Document
+- [UV Index](https://openweathermap.org/api/uvi) - UV Index API DOcument
+
+## ⛄️ Author
+
+- **German Ramirez** - [GitHub](https://github.com/izaack89/)
