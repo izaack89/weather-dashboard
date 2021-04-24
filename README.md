@@ -1,10 +1,8 @@
 # 🌥[Weather Dashboard 🔗](https://izaack89.github.io/weather-dashboard/)
 
-This Quiz is to help you to understand Javascript so take the quiz and you can find on what topics you should review or you can demostrate that you are a Master.
+With this app you can know the weather of a City with 5 day forecast. This will help you to planify your activities according to the weather prediction.
 
 ## 🌦 Weather Dashboard App
-
-With this app you can know the weather of a City with 5 day forecast. This will help you to planify your activities according to the weather prediction.
 
 1. Main View
 
