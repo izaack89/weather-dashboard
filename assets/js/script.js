@@ -18,7 +18,7 @@ var weatherAPI = "7ec7b4300005c010153d043f44737174";
 // Get today Info and format to display on the front end
 var today = moment().format("MMM Do, YYYY");
 // Variable that will be used to stoage what is inside of the local storage data
-var citiesLocalSotage = [];
+var citiesLocalStorage = [];
 
 
 // *************************  Start Sectio of the functions *************************
@@ -42,7 +42,7 @@ var UVIndex = function (ln, lt) {
     //I set the value of the API URL and I concatenate the longitude and latitude that I sent before and the API Key to get the data
     var uvqURL =
         "https://api.openweathermap.org/data/2.5/uvi?appid=" +
-        weatherAPI +
+        weatherAPI +"&units=imperial"+
         "&lat=" +
         lt +
         "&lon=" +
@@ -100,7 +100,7 @@ var displayForecastWeather = function (ln, lt) {
         lt +
         "&lon=" +
         ln +
-        "&exclude=current&appid=" +
+        "&exclude=current&units=imperial&appid=" +
         weatherAPI;
 
     // I do the fecth
@@ -190,7 +190,7 @@ var getWeather = function () {
     var apiUrl =
         "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
-        "&appid=" +
+        "&units=imperial&appid=" +
         weatherAPI;
     // I do the fecth
     fetch(apiUrl).then(function (response) {
@@ -218,8 +218,8 @@ var getWeather = function () {
                 
                 // I do a loop of the local Storage information so if it detects if break the loop and set a varaible to false  
                 var checkCityLocalStorage = false;
-                for (var it = 0; it < citiesLocalSotage.length; it++) {
-                    if (citiesLocalSotage[it].toUpperCase() == city.toUpperCase()) {
+                for (var it = 0; it < citiesLocalStorage.length; it++) {
+                    if (citiesLocalStorage[it].toUpperCase() == city.toUpperCase()) {
                         checkCityLocalStorage = true;
                         break;
                     }
@@ -228,10 +228,10 @@ var getWeather = function () {
                 if (!checkCityLocalStorage) {
                     // I call the function that create the button of the city
                     createCityHistorical(city);
-                    citiesLocalSotage.push(city);
+                    citiesLocalStorage.push(city);
                     localStorage.setItem(
                         "weathercities",
-                        JSON.stringify(citiesLocalSotage)
+                        JSON.stringify(citiesLocalStorage)
                     );
                 }
                 // I call to the function of the 5 day forecast using the Latitude and Longitude 
@@ -263,7 +263,7 @@ var getOldWeather = function (event) {
 // I clean the Local Storage
 var cleanLStorage = function () {
     // Clean the varaible 
-    citiesLocalSotage = [];
+    citiesLocalStorage = [];
     // Clean the local Storage
     localStorage.setItem("weathercities", '');
     // Cleant the list of the front end 
@@ -275,18 +275,18 @@ var cleanLStorage = function () {
 // This function is to initialize the variable that have the information of the local Storage and if are data can create the buttons
 var initSystem = function () {
     // I pass what is inside of the local Storage 
-    citiesLocalSotage = localStorage.getItem("weathercities");
-    if (citiesLocalSotage !== null && citiesLocalSotage.length>0) {
+    citiesLocalStorage = localStorage.getItem("weathercities");
+    if (citiesLocalStorage !== null && citiesLocalStorage.length>0) {
         //If exist I parse the elements in order to be array
-        citiesLocalSotage = JSON.parse(localStorage.getItem("weathercities"));    
+        citiesLocalStorage = JSON.parse(localStorage.getItem("weathercities"));    
         // if is not null I do a loop to get the information of all the cities         
-        for (i = 0; i < citiesLocalSotage.length; i++) {
+        for (i = 0; i < citiesLocalStorage.length; i++) {
             // I call the function that create the buttons
-            createCityHistorical(citiesLocalSotage[i]);
+            createCityHistorical(citiesLocalStorage[i]);
         }
     } else {
         // if is null I declare the variable as null and as array
-        citiesLocalSotage = [];
+        citiesLocalStorage = [];
     }
 };
 
