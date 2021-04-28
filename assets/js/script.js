@@ -160,8 +160,7 @@ var displayForecastWeather = function (ln, lt) {
                     imgEl.setAttribute("style", "width:50px;");
                     liTempEl.textContent = "Temp: " + dataDaily[i].temp.day + " °F";
                     //Display Wind speed and convert to MPH
-                    var windSpeeds = dataDaily[i].wind_speed;
-                    var windSpeedsMiles = (windSpeeds * 2.237).toFixed(1);
+                    var windSpeedsMiles = dataDaily[i].wind_speed.toFixed(1);
                     // Once that I get the value I set that into the list of the front end 
                     liWindEl.textContent = "Wind: " + windSpeedsMiles + " MPH";
                     liHumidityEl.textContent =
@@ -207,8 +206,7 @@ var getWeather = function () {
                     "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
                 iconWeather.setAttribute("src", iconurl);
                 //Display Wind speed and convert to MPH
-                var windSpeeds = data.wind.speed;
-                var windSpeedsMiles = (windSpeeds * 2.237).toFixed(1);
+                var windSpeedsMiles = data.wind.speed.toFixed(1);
                 windMain.textContent = windSpeedsMiles + " MPH";
                 // Print the information of the temparature and the humidity to the front-end 
                 tempMain.textContent = data.main.temp + " °F ";
